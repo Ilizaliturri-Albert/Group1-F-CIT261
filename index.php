@@ -6,8 +6,8 @@ Home Page of Kiss My Budget App
     <head>
         <meta charset="UTF-8">
         <title>Home | KrystalSnyder.com</title>
-<!--        <link rel="stylesheet" type="text/css"
-  media="screen" href="style/normalize.css" />-->
+<link rel="stylesheet" type="text/css"
+      media="screen" href="style/style.css">
         <meta name="author" content="Krystal Snyder">
         <meta name="description" content="This is a mobile application being developed by BYU-I students to use for budgetting.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +34,7 @@ Home Page of Kiss My Budget App
                
             </main>
             <aside role="complementary">
-                <div>
-                    <?php include $_SERVER['DOCUMENT_ROOT'] . '/modularization/.php'; ?>
-                </div>
+                
             </aside>
             <footer role="contentinfo">
           
