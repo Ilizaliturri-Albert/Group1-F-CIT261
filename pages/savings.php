@@ -49,7 +49,9 @@ Savings Page of Kiss My Budget App
             </nav>
             <main role="main">
                 <div id="pageheader">
-                <h1>Your Savings</h1>
+                    <h1>YOUR SAVINGS<br><br>
+                        <div id="orange">Saving — for anything — requires us to not get things now <br> so we can get bigger ones later.</div>
+                </h1>
                 </div>
                 <p>You can watch you savings grow here! Make goals to increase your savings or specify plans to use your savings for.</p>
             
