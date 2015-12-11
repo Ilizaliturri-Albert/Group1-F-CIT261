@@ -6,8 +6,8 @@ Budget Page of Kiss My Budget App
     <head>
         <meta charset="UTF-8">
         <title>Home | KrystalSnyder.com</title>
-<!--        <link rel="stylesheet" type="text/css"
-  media="screen" href="style/normalize.css" />-->
+<link rel="stylesheet" type="text/css"
+      media="screen" href="/style/style.css"/>
         <meta name="author" content="Krystal Snyder">
         <meta name="description" content="This is a mobile application being developed by BYU-I students to use for budgetting.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,16 +37,15 @@ Budget Page of Kiss My Budget App
         </script>
     </head>
     <body id="home" onload="load()">
-        <header role="banner">
-            <div>
-                <h1>Budget</h1>
-            </div>
-        </header>
-        <nav role="navigation">
-            <div>
-                <?php include $_SERVER['DOCUMENT_ROOT'] . '/modularization/nav.php'; ?>
-            </div>
-        </nav>
+        
+         <header role="banner">
+            </header>
+              
+            <nav role="navigation">
+                
+                    <?php include $_SERVER['DOCUMENT_ROOT'] . '/modularization/nav.php'; ?>
+                
+            </nav>
         <main role="main">
             <h1>Your Budget</h1>
             <p>This is your Budget. You can make goals for coming days, months, and years as well as add and remove budget items.</p>
