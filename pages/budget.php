@@ -47,8 +47,12 @@ Budget Page of Kiss My Budget App
                 
             </nav>
         <main role="main">
-            <h1>Your Budget</h1>
-            <p>This is your Budget. You can make goals for coming days, months, and years as well as add and remove budget items.</p>
+            <div id="pageheader">
+                <h1>Your Budget<br><br>
+            
+                <div id="orange">BEWARE OF LITTLE EXPENSES;<br> A SMALL LEAK WILL SINK A GREAT SHIP.</div></h1>
+            </div>
+            <p>This is where you can enter all your budget information. Enter the appropriate expenses and their expected and actual cost. You can see where you are spending as expected and where you can or need to make changes to meet your goals.</p>
         </main>
         <aside role="complementary">
             <div>
@@ -56,18 +60,19 @@ Budget Page of Kiss My Budget App
             </div>
         </aside>
         <div id="budget-list">
-            <button onclick="budgetList()">Add New Row</button>
-            <input type="button" value="save" onclick="save()" />
-            <ul class="title">
+            
+<!--            <ul class="title">
                 <li class="title">Item</li>
                 <li class="title">Expected</li>
                 <li class="title">Actual</li>
-            </ul>
+            </ul>-->
             <ul id="budget-listing">
-                <li><span><input type="text" id="expenseName" ><input type="text" id="expectedExpense" value="enter expected expense"><input type="text" id="actualExpense" value="enter actual expense"></span></li>
-                <li><span><input type="text" id="expenseName" value=""><input type="text" id="expectedExpense" value="enter expected expense"><input type="text" id="actualExpense" value="enter actual expense"></span></li>
-                <li><span><input type="text" id="expenseName" value="enter expensive name"><input type="text" id="expectedExpense" value="enter expected expense"><input type="text" id="actualExpense" value="enter actual expense"></span></li>                    
+                <li><span><input type="text" id="expenseName" placeholder="enter expense name" ><input type="text" id="expectedExpense" placeholder="enter expected cost"><input type="text" id="actualExpense" placeholder="enter actual cost"></span></li>
+                <li><span><input type="text" id="expenseName" placeholder="enter expense name" ><input type="text" id="expectedExpense" placeholder="enter expected cost"><input type="text" id="actualExpense" placeholder="enter actual cost"></span></li>
+                <li><span><input type="text" id="expenseName" placeholder="enter expense name" ><input type="text" id="expectedExpense" placeholder="enter expected cost"><input type="text" id="actualExpense" placeholder="enter actual cost"></span></li>
             </ul>
+                <button onclick="budgetList()">Add New Row</button>
+            <input type="button" value="save" onclick="save()" />
         </div><!-- budget-list -->
         <footer role="contentinfo">
             <div>

@@ -27,7 +27,9 @@ Home Page of Kiss My Budget App
             
             <main role="main">
                 
-                <h1>MONEY IS ONLY A TOOL.<br> <span id="white">IT WILL TAKE YOU WHEREVER YOU WISH,</span><br> <span id="orange">BUT IT WILL NOT REPLACE YOU AS THE DRIVER.</span></h1>
+                <div id="pageheader">
+                <h1>MONEY IS ONLY A TOOL.<br> <span id="purple">IT WILL TAKE YOU WHEREVER YOU WISH,</span><br> <span id="orange">BUT IT WILL NOT REPLACE YOU AS THE DRIVER.</span></h1>
+                </div>
                 
                 <p>This is the main page of the budgetting app. More content to come soon!</p>
             

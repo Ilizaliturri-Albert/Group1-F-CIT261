@@ -1,8 +1,1 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<div>Copyright © 2015 Krystal Snyder & Travis Harley  |  Last Updated: <?php echo date('F j, Y g:i a T',  getlastmod())?>         </div>
