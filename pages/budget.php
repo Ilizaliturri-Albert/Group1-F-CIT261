@@ -78,10 +78,9 @@ Budget Page of Kiss My Budget App
 ******** 4. load data from local storage inside respective input id's
 ******** 5. calculate the total costs of expected/actual columns
         */
+
     //a new line of rows
     function addRow(){
-        
-      
         
       
         

@@ -49,7 +49,7 @@ Debts Page of Kiss My Budget App
             </nav>
             <main role="main">
                 <div id="pageheader">
-                <h1>YOUR DEBTS</h1>
+                <h1>Your Debts</h1>
                 </div>
                 <p>Here you can track your debts. Make goals to pay off your debts and see a running balance of when you can expect your debts to be paid off.</p>
             
