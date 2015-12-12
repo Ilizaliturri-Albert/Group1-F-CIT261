@@ -5,7 +5,7 @@ Budget Page of Kiss My Budget App
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
-        <title>Home | KrystalSnyder.com</title>
+        <title>Budget</title>
 <link rel="stylesheet" type="text/css"
       media="screen" href="/style/style.css"/>
         <meta name="author" content="Krystal Snyder">
@@ -35,7 +35,9 @@ Budget Page of Kiss My Budget App
                 
             </nav>
         <main role="main">
+            <div id="pageheader">
             <h1>Your Budget</h1>
+            </div>
             <p>This is your Budget. You can make goals for coming days, months, and years as well as add and remove budget items.</p>
         </main>
         <aside role="complementary">

@@ -5,7 +5,7 @@ Savings Page of Kiss My Budget App
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
-        <title>Home | KrystalSnyder.com</title>
+        <title>Savings</title>
 <link rel="stylesheet" type="text/css"
       media="screen" href="/style/style.css"/>
         <meta name="author" content="Krystal Snyder">
