@@ -83,6 +83,8 @@ Budget Page of Kiss My Budget App
         
       
         
+      
+        
         var rowNumber = getCurrentCount();
         var html = "<div class='rowClass'><input id='name-"+rowNumber+"' type='text'><input id='expected-"+rowNumber+"' type='text'><input id='actual-"+rowNumber+"' type='text'></div>";
         
@@ -114,8 +116,10 @@ Budget Page of Kiss My Budget App
             localStorage.setItem("ExpectedTotal", stringTotal);
             localStorage.getItem(localStorage.key(stringTotal));
             var parseTotal = JSON.parse(stringTotal);
+
             var ouput = document.getElementById('output-expected').value = parseTotal; 
             
+
         } 
  
     }
@@ -171,6 +175,7 @@ Budget Page of Kiss My Budget App
         }
         // loop through the input fields and parse the data
         for(i = 0; i < localStorage.length; i++){
+
             var row = localStorage.getItem(localStorage.key(i));
             var parsed = JSON.parse(row);
             
@@ -180,9 +185,12 @@ Budget Page of Kiss My Budget App
             
         }
     }
+
+
     // initialize the app with a set of rows
     document.addEventListener("DOMContentLoaded", function(event) { 
         addRow();
     });
     
 </script>
+
