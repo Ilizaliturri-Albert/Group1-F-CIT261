@@ -35,24 +35,31 @@ Budget Page of Kiss My Budget App
                 
             </nav>
         <main role="main">
-            <h1>Your Budget</h1>
+            <div id="pageheader">
+                <h1>YOUR BUDGET<br><br>
+                    <div id="orange">A budget is telling your money where to go,<br> instead of wondering where it went.</div></h1>
+            </div>
             <p>This is your Budget. You can make goals for coming days, months, and years as well as add and remove budget items.</p>
+              
         </main>
         <aside role="complementary">
             <div>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modularization/user.php'; ?>
             </div>
-        </aside>
-        <div id="budget-list">
-            <button onclick="addRow()">Add New Row</button>
-            <input type="button" value="Save" onclick="save()" />
+            <div id="budget-list">
+            
             <ul>
                 <li>Expense Name</li>
                 <li>Expected Amount</li>
                 <li>Actual Amount</li>
             </ul>
+               
             <div id="rowContent"></div>
         </div><!-- budget-list -->
+            <button onclick="addRow()">Add New Row</button>
+            <input type="button" value="Save" onclick="save()" />
+        </aside>
+        
         <footer role="contentinfo">
             <div>
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modularization/footer.php'; ?>
@@ -140,5 +147,4 @@ Budget Page of Kiss My Budget App
 </script>
 
 
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help
+
