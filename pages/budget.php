@@ -44,14 +44,21 @@ Budget Page of Kiss My Budget App
             </div>
         </aside>
         <div id="budget-list">
-            <button onclick="addRow()">Add New Row</button>
-            <input type="button" value="Save" onclick="save()" />
             <ul>
                 <li>Expense Name</li>
                 <li>Expected Amount</li>
                 <li>Actual Amount</li>
             </ul>
             <div id="rowContent"></div>
+            <div id="output">
+                <input type="text" placeholder="Totals">
+                <input type="text" id="output-expected">
+                <input type="text" id="output-actual">
+            </div>
+            <button onclick="addRow()">Add New Row</button>
+            <input type="button" value="Save" onclick="save()" />
+            <input type="button" value="Add Expected" onclick="addExpectedTotals()" />
+            <input type="button" value="Add Actual" onclick="addActualTotals()" />
         </div><!-- budget-list -->
         <footer role="contentinfo">
             <div>
@@ -75,12 +82,14 @@ Budget Page of Kiss My Budget App
     //a new line of rows
     function addRow(){
         
+      
+        
         var rowNumber = getCurrentCount();
         var html = "<div class='rowClass'><input id='name-"+rowNumber+"' type='text'><input id='expected-"+rowNumber+"' type='text'><input id='actual-"+rowNumber+"' type='text'></div>";
         
         var currentHtml = document.getElementById('rowContent').innerHTML;        
         document.getElementById('rowContent').innerHTML = currentHtml + html;
-
+        
     }
     
     
@@ -90,9 +99,54 @@ Budget Page of Kiss My Budget App
         return parent.getElementsByTagName('div').length;
     }
     
+    function addExpectedTotals(){
+        
+        var rowNumber = getCurrentCount();
+        var all = new Array();
+        
+        // loop for expected 
+        for(i = 0; i < rowNumber; i++){
+            
+            var expectedCol = document.getElementById("expected-" + [i]).value;
+            var theArray = all[i] = expectedCol;  
+            var total = (eval(all.join(' + ')));        
+            
+            var stringTotal = JSON.stringify(total);
+            localStorage.setItem("ExpectedTotal", stringTotal);
+            localStorage.getItem(localStorage.key(stringTotal));
+            var parseTotal = JSON.parse(stringTotal);
+
+            var ouput = document.getElementById('output-expected').value = parseTotal; 
+            
+
+        } 
+ 
+    }
+    
+    function addActualTotals(){
+        
+        var rowNumber = getCurrentCount();
+        var actualArray = new Array();
+        
+        // loop for actuals
+        for(i = 0; i < rowNumber; i++){
+        
+            var actualCol = document.getElementById("actual-" + [i]).value;
+            var createArray = actualArray[i] = actualCol;
+            var addActual = (eval(actualArray.join(' + ')));
+            
+            var stringActualTotal = JSON.stringify(addActual);
+            localStorage.setItem("ActualTotal", stringActualTotal);
+            localStorage.getItem(localStorage.key(stringActualTotal));
+            var parseActualTotal = JSON.parse(stringActualTotal);
+            
+            var actualOutput = document.getElementById('output-actual').value = parseActualTotal; 
+        }
+    }
+    
     
     // save the data
-    function save(rowNumber){
+    function save(){
         
         var rowNumber = getCurrentCount();
                 
@@ -105,7 +159,7 @@ Budget Page of Kiss My Budget App
             
             var allIds = [inputName, inputExpected, inputActual];
             var key_json = JSON.stringify(allIds);
-            localStorage.setItem("Item-"+i, key_json);
+            localStorage.setItem("Item-" + i, key_json);
         }
         
     }
@@ -121,7 +175,6 @@ Budget Page of Kiss My Budget App
         // loop through the input fields and parse the data
         for(i = 0; i < localStorage.length; i++){
 
-            
             var row = localStorage.getItem(localStorage.key(i));
             var parsed = JSON.parse(row);
             
@@ -132,13 +185,11 @@ Budget Page of Kiss My Budget App
         }
     }
 
-    
+
     // initialize the app with a set of rows
     document.addEventListener("DOMContentLoaded", function(event) { 
-      addRow();
+        addRow();
     });
+    
 </script>
 
-
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help
