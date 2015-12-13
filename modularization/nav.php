@@ -1,9 +1,16 @@
-    
+<header>
+    <div class="logo">
+        <a href="/"><img id="logo" src="/images/kissylips.gif"></a>
+    </div><!-- logo -->
+    <div class="main-nav">
+        <nav>
+        <label for="show-menu" class="show-menu">Show Menu</label>
+        <input type="checkbox" id="show-menu" role="button">
+        <ul id="menu">
+                <li class="nav-list"><a href="/">Home</a></li>
+                <li class="nav-list"><a href="/pages/budget.php">budget</a></li>
+            </ul>
+        </nav>
+    </div>
 
-<a href="/"><img id="logo" src="/images/kissylips.gif"></a>
-
-<div id="nav1"><a href="/pages/budget.php">budget</a></div> 
-<div id="nav2"><a href="/pages/debt.php">debt</a></div>  
-<div id="nav3"><a href="/pages/savings.php">savings</a> </div>  
-<div id="nav4"><a href="/">home</a></div>
-
+</header>
