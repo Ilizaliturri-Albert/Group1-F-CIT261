@@ -11,22 +11,11 @@ Budget Page of Kiss My Budget App
         <meta name="author" content="Krystal Snyder">
         <meta name="description" content="This is a mobile application being developed by BYU-I students to use for budgetting.">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-            .rowClass{
-                margin:5px;
-            }
-            li{
-                list-style: none;
-                display: inline-block;
-                width: 100%;
-                max-width: 173px;
-                font-weight: bold;
-            }
-        </style>
+
     </head>
     <body id="home" onload="load()">
-        
-         <header role="banner">
+        <div class="container">
+            <header role="banner">
             </header>
               
             <nav role="navigation">
@@ -46,18 +35,11 @@ Budget Page of Kiss My Budget App
             </div>
         </aside>
         <div id="budget-list">
-            <ul>
-                <li>Expense Name</li>
-                <li>Expected Amount</li>
-                <li>Actual Amount</li>
-            </ul>
+            <input type="text" value="Expense Name" class="hide-input">
+            <input type="text" value="Expected Amount" class="hide-input">
+            <input type="text" value="Actual Amount" class="hide-input">
             <div id="rowContent"></div>
-            <div id="output">
-                <input type="text" placeholder="Totals">
-                <input type="text" id="output-expected">
-                <input type="text" id="output-actual">
-            </div>
-            <input type="button" value="Save" onclick="save()" />
+            <input type="button" value="Save" onclick="save()" class="btn"/>
 
         </div><!-- budget-list -->
         <footer role="contentinfo">
@@ -65,6 +47,8 @@ Budget Page of Kiss My Budget App
                 <?php include $_SERVER['DOCUMENT_ROOT'] . '/modularization/footer.php'; ?>
             </div>
         </footer>
+        </div><!-- container -->
+         
     </body>
 </html>
 <script>
@@ -153,4 +137,6 @@ Budget Page of Kiss My Budget App
     });
     
 </script>
+
+
 
