@@ -31,12 +31,58 @@ body {
  
 }
 h1 {
-    padding:5%;
-    clear:both;
-    color:#90c5a9;
-    font-family:sans-serif;
-    text-align:center;
-    font-size:150%;
+    padding: 5%;
+    clear: both;
+    color: #90c5a9;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2rem;
+}
+.btn{
+    padding: 10px;
+    text-transform: uppercase;
+}
+.rowClass{
+                margin:5px;
+            }
+input {
+    width: 100%;
+    max-width: 210px;
+    display: inline-block;
+    padding: 15px;
+    margin: 5px;
+}
+.hide-input {
+    background: #eee;
+    text-align: center;
+    font-size: 1.5rem;
+}
+header {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.logo{
+    width: 35%;
+    float: left;
+}
+.main-nav{
+    width: 65%;
+    float: right;
+}
+.nav-list {
+    display: inline-block;
+    padding-right: 10px;
+}
+#budget-list {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
 }
 #purple {
     color:#3f2860;
@@ -45,9 +91,10 @@ h1 {
     color:#ef6d3b;
 }
 #logo {
-    float:left;
-    width:15%;
-    padding:2%;
+    float: left;
+    width: 100%;
+    padding: 2%;
+    max-width: 145px;
 }
 p {
     color:#7a9a95;
@@ -60,11 +107,13 @@ p {
     transform: rotate(360deg);
     transition: all 0.5s ease-in-out 0s;
 }
-footer{
-    color:#ffffff;
+footer {
+    color: #ffffff;
     text-align: center;
-    font-family:sans-serif;
-    font-size:70%;
+    font-family: sans-serif;
+    font-size: 70%;
+    clear: both;
+    padding-top: 50px;
 }
 ul li {
     list-style-type: none;
@@ -86,15 +135,151 @@ button:hover {
     -webkit-transform: scale(1.5,1.5); /* Safari */
     transform: scale(1.5,1.5); /* Standard syntax */
 }
-nav div{
-    max-width: 70%;
-}
-input {
+
+#budget-list debt-listing savings-listing {
     max-width: 80%;
+    float:left;
 }
-@media	(max-width:480px){
+
+
+/* MAIN NAV */
+/*Strip the ul of padding and list styling*/
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position: absolute;
+}
+
+/*Create a horizontal list with spacing*/
+li {
+	display:inline-block;
+	float: left;
+	margin-right: 1px;
+}
+
+/*Style for menu links*/
+li a {
+	display:block;
+	min-width:140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	background: #2f3036;
+	text-decoration: none;
+}
+
+/*Hover state for top level links*/
+li:hover a {
+	background: #19c589;
+}
+
+/*Style for dropdown links*/
+li:hover ul a {
+	background: #f3f3f3;
+	color: #2f3036;
+	height: 40px;
+	line-height: 40px;
+}
+
+/*Hover state for dropdown links*/
+li:hover ul a:hover {
+	background: #19c589;
+	color: #fff;
+}
+
+/*Hide dropdown links until they are needed*/
+li ul {
+	display: none;
+}
+
+/*Make dropdown links vertical*/
+li ul li {
+	display: block;
+	float: none;
+}
+
+/*Prevent text wrapping*/
+li ul li a {
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+}
+
+/*Display the dropdown on hover*/
+ul li a:hover + .hidden, .hidden:hover {
+	display: block;
+}
+
+/*Style 'show menu' label button and hide it by default*/
+.show-menu {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-decoration: none;
+	color: #fff;
+	background: #19c589;
+	text-align: center;
+	padding: 10px 0;
+	display: none;
+}
+
+/*Hide checkbox*/
+input[type=checkbox]{
+    display: none;
+}
+
+/*Show menu when invisible checkbox is checked*/
+input[type=checkbox]:checked ~ #menu{
+    display: block;
+}
+
+@media only screen and (max-width: 800px){
     
-    h1 {
-        font-size:75%;
-    } 
+        .logo {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    
+    #logo {
+        float: none;
+        width: 100%;
+        padding: 2%;
+        max-width: 145px;
+    }
+    .main-nav {
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .nav-list {
+    max-width: 100%;
+}
+    #budget-list {
+    text-align: center;
+}
+/*Make dropdown links appear inline*/
+	ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	ul li, li a {
+		width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
+}
+@media only screen and (max-width: 480px){
+    
+
+    
+
 }
